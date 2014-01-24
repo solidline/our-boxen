@@ -79,7 +79,12 @@ node default {
     [
       'ack',
       'findutils',
-      'gnu-tar'
+      'gnu-tar',
+      'the_silver_searcher',
+      'reattach-to-user-namespace',
+      'ctags',
+      'phantomjs',
+      'wget'
     ]:
   }
 
@@ -89,7 +94,23 @@ node default {
   }
 
 
-  include macvim
   include virtualbox
+  include macvim
   include dropbox
+
+  include chrome
+  include vagrant
+
+  vagrant::box { 'squeeze64/vmware_fusion':
+    source => 'https://s3.amazonaws.com/github-ops/vagrant/squeeze64-6.0.7-vmware_fusion.box'
+  }
+
+  include skype
+  include tmux
+  include iterm2::dev 
+
+  include iterm2::colors::solarized_light
+  include iterm2::colors::solarized_dark
+
+  include chrome
 }

@@ -56,6 +56,12 @@ github "xquartz",    "1.1.0"
 # Optional/custom modules. There are tons available at
 # https://github.com/boxen.
 
-github "macvim",    "1.0.0"
-github "virtualbox",    "1.0.10"
-github "dropbox",    "1.2.0"
+github "macvim"                     , "1.0.0"
+github "virtualbox"                 , "1.0.10"
+github "dropbox"                    , "1.2.0"
+github "flux"                       , "0.0.1"
+github "vagrant"                    , "3.0.4"
+github "chrome"                     , "1.1.2"
+github "skype"                      , "1.0.8"
+github "tmux"                       , "1.0.2"
+github "iterm2"                     , "1.0.6"
