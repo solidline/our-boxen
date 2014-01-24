@@ -87,4 +87,9 @@ node default {
     ensure => link,
     target => $boxen::config::repodir
   }
+
+
+  include macvim
+  include virtualbox
+  include dropbox
 }
