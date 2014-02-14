@@ -84,9 +84,19 @@ node default {
       'reattach-to-user-namespace',
       'ctags',
       'phantomjs',
-      'wget'
+      'wget',
+      'multimarkdown',
+      'maven',
+      'vimpager'
     ]:
   }
+
+  class { 'nodejs::global':
+    version => 'v0.10.8'
+  }
+
+  nodejs::module { 'bower': node_version => 'v0.10.8' }
+  nodejs::module { 'ninja': node_version => 'v0.10.8' }
 
   file { "${boxen::config::srcdir}/our-boxen":
     ensure => link,
@@ -113,4 +123,7 @@ node default {
   include iterm2::colors::solarized_dark
 
   include chrome
+
+  include notational_velocity::nvalt
+
 }
